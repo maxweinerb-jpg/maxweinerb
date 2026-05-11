@@ -2,59 +2,228 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Home" description="Max Weiner — placeholder description">
-  <section class="hero">
-    <h1>Max Weiner</h1>
-    <p class="tagline">Placeholder tagline goes here.</p>
-    <p class="intro">
-      This is placeholder intro copy. A sentence or two about who you are and what you do, written
-      in a way that makes someone want to keep reading.
-    </p>
-  </section>
+<Layout title="Home" description="Max Weiner — Customer Success, AI, Builder">
 
-  <section class="links">
-    <a href="/the-work">See the work →</a>
-    <a href="/work-with-me">Work with me →</a>
-  </section>
+  <div class="mw-hero">
+    <div class="mw-hero-tag">Customer Success · AI · Builder</div>
+    <h1 class="mw-hero-headline">Max Weiner.<br><em>Figure it out.</em></h1>
+  </div>
+
+  <div class="mw-hook">
+    <div class="mw-hook-lines">
+      <p class="mw-hook-line">Ten years ago I got laid off and went to Vegas to figure things out.</p>
+      <p class="mw-hook-line">Last week I went to Vegas for a bachelor party.</p>
+      <p class="mw-hook-line muted">On Thursday, I got laid off again.</p>
+    </div>
+  </div>
+
+  <div class="mw-narrative">
+    <div class="mw-narrative-rule"></div>
+    <p>
+      Some things change. At 25, Vegas was a week of wandering through casino food courts on a Wednesday afternoon wondering what came next. This time I had a king bed, great shows, and spent most of it counting down to get home to my sons. Progress, maybe.
+    </p>
+    <p>
+      What hasn't changed: I still don't have a clean answer to what comes next. I have <strong>seven months of severance</strong>, a newborn, a toddler, a dog named Loki, and a list of things I've been meaning to build, write, and think about. This site is where I do that out loud.
+    </p>
+    <div class="pullquote">
+      The company told me I'd helped build a better Internet.<br>Turns out the Internet didn't need as much help as they thought.
+    </div>
+    <p>
+      I've spent ten years in <strong>Customer Success</strong> — at startups, at a public company, most recently at Cloudflare. I care about the function deeply, especially now that AI is eating the repetitive surface of it and forcing everyone to figure out what actually matters. I have opinions about that. Some of them will end up here.
+    </p>
+    <p>
+      I'm also a <strong>CS career coach</strong>, a tinkerer, a Michigan football fan with bad opinions about Big Ten expansion, and someone who moved to Barcelona on a whim and came back right as COVID started. This site will have some of that too.
+    </p>
+    <p>
+      Here's what to expect: a build log, some essays, a resume with a chatbot trained on me, and an archived version of the 2019 site I built for a grad school marketing class that somehow included a lasagna recipe. Explore in whichever order makes sense.
+    </p>
+    <div class="mw-nav-site">
+      <a href="/about">About me</a>
+      <a href="/the-work">The Work</a>
+      <a href="/work-with-me">Work With Me</a>
+      <a href="/archive">The Archive</a>
+    </div>
+  </div>
+
+  <div class="mw-interactive-placeholder">
+    <div class="mw-placeholder-label">Interactive element — TBD</div>
+    <p class="mw-placeholder-desc">Something fun lives here. Timeline, bingo card, quiz, contrast card.<br>To be decided.</p>
+  </div>
+
 </Layout>
 
 <style>
-  .hero {
-    padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(28, 28, 26, 0.1);
-    margin-bottom: 2.5rem;
+  /* Override Layout's main constraints so sections control their own spacing */
+  :global(main) {
+    max-width: none;
+    padding: 0;
+    margin: 0;
   }
 
-  h1 {
+  .mw-hero {
+    padding: 5.5rem 3rem 3rem;
+    max-width: 780px;
+  }
+
+  .mw-hero-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .mw-hero-tag::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 1.5px;
+    background: var(--color-accent);
+    flex-shrink: 0;
+  }
+
+  .mw-hero-headline {
     font-family: var(--font-ubuntu);
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 52px;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    color: var(--color-text);
+    margin: 0 0 0.5rem;
+  }
+
+  .mw-hero-headline em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-accent);
+  }
+
+  .mw-hook {
+    padding: 2.5rem 3rem 0;
+    max-width: 720px;
+  }
+
+  .mw-hook-lines {
+    margin: 0 0 2rem;
+  }
+
+  .mw-hook-line {
+    font-family: var(--font-sans);
+    font-size: 20px;
+    line-height: 1.6;
+    color: #3A3A36;
+    margin: 0;
+    padding: 0.2rem 0;
+  }
+
+  .mw-hook-line strong {
+    font-weight: 500;
+    color: var(--color-text);
+  }
+
+  .mw-hook-line.muted {
+    color: #7A7A72;
+    font-size: 18px;
+  }
+
+  .mw-narrative {
+    padding: 3rem 3rem 0;
+    max-width: 660px;
+  }
+
+  .mw-narrative-rule {
+    width: 48px;
+    height: 2px;
+    background: var(--color-accent);
+    margin-bottom: 2rem;
+    border-radius: 1px;
+  }
+
+  .mw-narrative p {
+    font-size: 17px;
+    line-height: 1.85;
+    color: #4A4A44;
+    margin: 0 0 1.4rem;
+    font-weight: 400;
+  }
+
+  .mw-narrative p:last-child {
+    margin-bottom: 0;
+  }
+
+  .mw-narrative strong {
+    color: var(--color-text);
+    font-weight: 500;
+  }
+
+  .mw-narrative em {
+    font-style: italic;
+    color: #3A3A36;
+  }
+
+  .pullquote {
+    font-family: var(--font-ubuntu);
+    font-size: 19px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-accent);
+    border-left: 2px solid var(--color-accent);
+    padding-left: 1.25rem;
+    margin: 1.75rem 0;
+    line-height: 1.6;
+  }
+
+  .mw-nav-site {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .mw-nav-site a {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .mw-nav-site a::after {
+    content: '→';
+    font-size: 12px;
+  }
+
+  .mw-interactive-placeholder {
+    margin: 4rem 3rem;
+    border: 1.5px dashed rgba(26, 58, 107, 0.25);
+    border-radius: 6px;
+    padding: 3.5rem 2rem;
+    text-align: center;
+    max-width: 640px;
+    background: rgba(26, 58, 107, 0.02);
+  }
+
+  .mw-placeholder-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
     margin-bottom: 0.75rem;
   }
 
-  .tagline {
-    font-family: var(--font-mono);
-    font-size: 1rem;
-    color: var(--color-accent);
-    margin-bottom: 1.5rem;
-  }
-
-  .intro {
-    font-size: 1.125rem;
-    max-width: 55ch;
-    opacity: 0.8;
-  }
-
-  .links {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .links a {
-    font-family: var(--font-mono);
-    font-size: 0.9375rem;
-    color: var(--color-accent);
-    font-weight: 500;
+  .mw-placeholder-desc {
+    font-size: 15px;
+    color: #9A9A90;
+    line-height: 1.6;
+    margin: 0;
   }
 </style>
