@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About" description="About Max Weiner">
+  <section>
+    <h1>About</h1>
+    <div class="body">
+      <p>
+        Placeholder bio paragraph one. This is where you introduce yourself — your background,
+        what you care about, and what shapes how you work.
+      </p>
+      <p>
+        Placeholder paragraph two. More context here — your path, what you've worked on, or what
+        drives the interests that show up in your work.
+      </p>
+      <p>
+        Placeholder paragraph three. A personal note, a belief, or something that gives a sense
+        of how you see the world.
+      </p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  h1 {
+    font-family: var(--font-ubuntu);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 60ch;
+  }
+
+  p {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    opacity: 0.85;
+  }
+</style>

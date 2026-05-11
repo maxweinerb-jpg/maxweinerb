@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home" description="Max Weiner — placeholder description">
+  <section class="hero">
+    <h1>Max Weiner</h1>
+    <p class="tagline">Placeholder tagline goes here.</p>
+    <p class="intro">
+      This is placeholder intro copy. A sentence or two about who you are and what you do, written
+      in a way that makes someone want to keep reading.
+    </p>
+  </section>
+
+  <section class="links">
+    <a href="/the-work">See the work →</a>
+    <a href="/work-with-me">Work with me →</a>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(28, 28, 26, 0.1);
+    margin-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-family: var(--font-ubuntu);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+  }
+
+  .tagline {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+  }
+
+  .intro {
+    font-size: 1.125rem;
+    max-width: 55ch;
+    opacity: 0.8;
+  }
+
+  .links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .links a {
+    font-family: var(--font-mono);
+    font-size: 0.9375rem;
+    color: var(--color-accent);
+    font-weight: 500;
+  }
+</style>

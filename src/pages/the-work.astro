@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="The Work" description="Selected work by Max Weiner">
+  <section>
+    <h1>The Work</h1>
+    <p class="intro">
+      Placeholder intro — a sentence or two about what this section contains and how to read it.
+    </p>
+
+    <div class="projects">
+      <article class="project">
+        <div class="project-header">
+          <h2>Project One</h2>
+          <span class="meta">Placeholder Category · 2024</span>
+        </div>
+        <p>
+          Placeholder description of the project. What it was, what role you played, and why it
+          matters. Keep it tight.
+        </p>
+      </article>
+
+      <article class="project">
+        <div class="project-header">
+          <h2>Project Two</h2>
+          <span class="meta">Placeholder Category · 2024</span>
+        </div>
+        <p>
+          Placeholder description of the project. What it was, what role you played, and why it
+          matters. Keep it tight.
+        </p>
+      </article>
+
+      <article class="project">
+        <div class="project-header">
+          <h2>Project Three</h2>
+          <span class="meta">Placeholder Category · 2023</span>
+        </div>
+        <p>
+          Placeholder description of the project. What it was, what role you played, and why it
+          matters. Keep it tight.
+        </p>
+      </article>
+
+      <article class="project">
+        <div class="project-header">
+          <h2>Project Four</h2>
+          <span class="meta">Placeholder Category · 2023</span>
+        </div>
+        <p>
+          Placeholder description of the project. What it was, what role you played, and why it
+          matters. Keep it tight.
+        </p>
+      </article>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  h1 {
+    font-family: var(--font-ubuntu);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+  }
+
+  .intro {
+    font-size: 1.0625rem;
+    max-width: 55ch;
+    opacity: 0.8;
+    margin-bottom: 3rem;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project {
+    padding: 2rem 0;
+    border-top: 1px solid rgba(28, 28, 26, 0.1);
+  }
+
+  .project:last-child {
+    border-bottom: 1px solid rgba(28, 28, 26, 0.1);
+  }
+
+  .project-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.625rem;
+    flex-wrap: wrap;
+  }
+
+  h2 {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    opacity: 0.45;
+  }
+
+  .project p {
+    font-size: 0.9375rem;
+    max-width: 60ch;
+    opacity: 0.75;
+    line-height: 1.65;
+  }
+</style>

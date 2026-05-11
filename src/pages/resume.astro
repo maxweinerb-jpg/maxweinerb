@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Resume" description="Max Weiner — Resume">
+  <section>
+    <div class="page-header">
+      <h1>Resume</h1>
+      <a href="#" class="download">Download PDF ↓</a>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-header">
+            <span class="role">Placeholder Role</span>
+            <span class="date">20XX – Present</span>
+          </div>
+          <span class="org">Placeholder Organization</span>
+          <p>Placeholder description of responsibilities and accomplishments.</p>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <span class="role">Placeholder Role</span>
+            <span class="date">20XX – 20XX</span>
+          </div>
+          <span class="org">Placeholder Organization</span>
+          <p>Placeholder description of responsibilities and accomplishments.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <div class="entries">
+        <div class="entry">
+          <div class="entry-header">
+            <span class="role">Placeholder Degree</span>
+            <span class="date">20XX</span>
+          </div>
+          <span class="org">Placeholder Institution</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <p class="skills">Placeholder skill · Placeholder skill · Placeholder skill · Placeholder skill · Placeholder skill</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+  }
+
+  h1 {
+    font-family: var(--font-ubuntu);
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .download {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--color-accent);
+  }
+
+  .section {
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid rgba(28, 28, 26, 0.1);
+  }
+
+  h2 {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin-bottom: 1.25rem;
+  }
+
+  .entries {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.125rem;
+  }
+
+  .role {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .date {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    opacity: 0.5;
+  }
+
+  .org {
+    font-size: 0.9375rem;
+    opacity: 0.6;
+    display: block;
+    margin-bottom: 0.375rem;
+  }
+
+  .entry p {
+    font-size: 0.9375rem;
+    opacity: 0.8;
+    max-width: 60ch;
+  }
+
+  .skills {
+    font-size: 0.9375rem;
+    opacity: 0.75;
+    line-height: 1.8;
+  }
+</style>
