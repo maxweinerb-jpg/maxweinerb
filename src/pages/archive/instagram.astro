@@ -1,23 +1,16 @@
 ---
-import ArchiveLayout from '../layouts/ArchiveLayout.astro';
+import ArchiveLayout from '../../layouts/ArchiveLayout.astro';
 ---
 
 <ArchiveLayout title="Is Instagram Marketing Right For Your Business? — Max on Marketing">
-
   <article class="wp-post">
-    <header class="wp-post-header">
-      <p class="wp-post-date">March 7, 2019</p>
-      <h1 class="wp-post-title">Is Instagram Marketing Right For Your Business?</h1>
-      <p class="wp-post-deck">5 questions to answer about your business before marketing with Instagram.</p>
-    </header>
+    <p class="wp-post-meta">Posted on March 7, 2019 by Max Weiner</p>
+    <h1 class="wp-post-title">Is Instagram Marketing Right For Your Business?</h1>
+    <p class="wp-post-deck">5 questions to answer about your business before marketing with Instagram.</p>
 
-    <img
-      class="wp-featured-img"
-      src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=860&h=380&fit=crop"
-      alt="Instagram"
-    />
+    <img class="wp-featured" src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=860&h=360&fit=crop" alt="Instagram" />
 
-    <div class="wp-content">
+    <div class="wp-post-content">
       <p>The idea that a "picture is worth a thousand words" can be best understood on Instagram. Starting in 2010 as a social picture sharing platform, Instagram has grown to over 800+ million daily active users and is no longer just an outlet for food pictures and vacation selfies. More recently, businesses have adopted the platform and used its visuals for consumer engagement, sales conversion, and brand awareness marketing activities. If you are debating using Instagram for your own business, just look at the top 100 brands in the world — 90% of them have an Instagram presence. As a marketer, what better way to get 1000 words in front of a potential customer than with a picture?</p>
 
       <p>However, if your company is like most small businesses and not a top 100 brand in the world, you may be wondering what value Instagram can create for your business? While some marketers, and blog posts, might convince you that Instagram is only for B2C (business-to-consumer) companies and the marketing channel of the future, that is not necessarily the case. Instagram has proven to be both successful for many businesses and a waste of marketing resources for others, regardless of B2C or B2B (business-to-business) models. As you think about your business, target customer, and value proposition, you should assess whether Instagram is a strategic/value-added marketing tool for your business.</p>
@@ -46,57 +39,8 @@ import ArchiveLayout from '../layouts/ArchiveLayout.astro';
       <p>If you decide to dabble with Instagram marketing, make sure to research and utilize Instagram marketing best practices to better ensure your success.</p>
     </div>
 
-    <p class="wp-back"><a href="/archive">← Back to Max on Marketing</a></p>
+    <div class="wp-post-footer">
+      <a href="/archive">← Max on Marketing</a>
+    </div>
   </article>
-
 </ArchiveLayout>
-
-<style>
-  .wp-post { max-width: 720px; }
-
-  .wp-post-date {
-    font-size: 0.8125rem;
-    color: #999;
-    margin-bottom: 0.375rem;
-  }
-
-  .wp-post-title {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #222;
-    line-height: 1.25;
-    margin-bottom: 0.5rem;
-  }
-
-  .wp-post-deck {
-    font-size: 1rem;
-    color: #666;
-    font-style: italic;
-    margin-bottom: 1.5rem;
-  }
-
-  .wp-featured-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 1.75rem;
-  }
-
-  .wp-back {
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #eee;
-    font-size: 0.875rem;
-  }
-
-  .wp-back a {
-    color: #0073aa;
-    text-decoration: none;
-  }
-
-  .wp-back a:hover {
-    text-decoration: underline;
-    opacity: 1;
-  }
-</style>

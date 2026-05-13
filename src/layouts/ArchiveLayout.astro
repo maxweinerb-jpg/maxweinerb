@@ -1,207 +1,360 @@
 ---
-import Layout from './Layout.astro';
-
 interface Props {
   title?: string;
 }
-
-const { title = 'The Archive — Max on Marketing' } = Astro.props;
+const { title = 'Max on Marketing' } = Astro.props;
 ---
 
-<Layout title={title} description="Max on Marketing — 2019 Georgetown grad school marketing blog, preserved.">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
 
-  <div class="arc-banner">
-    <p>In 2019, I built this site for a Georgetown grad school marketing class. In 2026, while rebuilding from scratch, I asked Claude to audit it. Claude noted the About page still referenced a trip to Spain and that there was a lasagna recipe. Both were true. What follows is the complete archive.</p>
+  <div class="arc-notice">
+    You've reached The Archive. This site was built in 2019 for a Georgetown grad school marketing class. Claude later audited it and noted the About page still referenced a trip to Spain and that there was a lasagna recipe. Both were accurate. <a href="/">Back to maxweinerb.com →</a>
   </div>
 
-  <div class="wp">
-    <div class="wp-head">
-      <div class="wp-wrap">
-        <a href="/archive" class="wp-site-title">Max on Marketing</a>
-      </div>
+  <header class="wp-header">
+    <div class="wp-wrap">
+      <a href="/archive" class="wp-title">Max on Marketing</a>
       <nav class="wp-nav">
-        <div class="wp-wrap">
-          <a href="/archive">Home</a>
-          <a href="/archive-about">About</a>
-        </div>
+        <a href="/archive">Home</a>
+        <a href="/archive/about">About</a>
       </nav>
     </div>
+  </header>
 
-    <div class="wp-body">
-      <div class="wp-wrap">
-        <slot />
-      </div>
-    </div>
-
-    <div class="wp-foot">
-      <p>Proudly powered by <a href="#">WordPress</a></p>
+  <div class="wp-main">
+    <div class="wp-wrap">
+      <slot />
     </div>
   </div>
 
-</Layout>
+  <footer class="wp-footer">
+    <div class="wp-wrap">
+      <p>Proudly powered by <a href="https://wordpress.com" target="_blank" rel="noopener">WordPress</a></p>
+    </div>
+  </footer>
 
-<style>
-  :global(main) {
-    max-width: none;
-    padding: 0;
-    margin: 0;
-  }
+  <div class="wp-cookie" id="wp-cookie">
+    <span>Privacy &amp; Cookies: This site uses cookies. By continuing to use this website, you agree to their use.</span>
+    <button onclick="document.getElementById('wp-cookie').style.display='none'">Close and accept</button>
+  </div>
 
-  .arc-banner {
-    background: var(--color-bg);
-    padding: 1.125rem 1.5rem;
-    border-bottom: 1px solid rgba(28, 28, 26, 0.12);
-  }
+</body>
+</html>
 
-  .arc-banner p {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    line-height: 1.7;
-    color: var(--color-text);
-    max-width: 900px;
-    margin: 0 auto;
-    opacity: 0.7;
-  }
+<style is:global>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  .wp {
-    background: #f7f7f7;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    color: #333;
-  }
-
-  .wp-wrap {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-
-  .wp-head {
+  body {
     background: #fff;
-    border-bottom: 1px solid #ddd;
+    color: #333;
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-bottom: 56px;
   }
 
-  .wp-site-title {
+  a { color: #0073aa; text-decoration: none; }
+  a:hover { color: #005580; text-decoration: underline; }
+
+  /* Archive notice banner */
+  .arc-notice {
+    background: #fffde7;
+    border-bottom: 1px solid #f9e400;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8125rem;
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .arc-notice a {
+    color: #1a3a6b;
+    font-weight: 700;
+    margin-left: 0.5rem;
+    text-decoration: underline;
+  }
+
+  .arc-notice a:hover { color: #0c2244; }
+
+  /* WordPress header */
+  .wp-wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .wp-header {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+  }
+
+  .wp-header .wp-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .wp-title {
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 1.875rem;
+    font-size: 1.75rem;
     font-weight: bold;
-    color: #222;
+    color: #111;
     text-decoration: none;
-    display: block;
-    padding: 1.5rem 0 1rem;
     line-height: 1.2;
   }
 
-  .wp-site-title:hover {
-    color: #0073aa;
-    opacity: 1;
-  }
+  .wp-title:hover { color: #0073aa; text-decoration: none; }
 
   .wp-nav {
-    background: #222;
-  }
-
-  .wp-nav .wp-wrap {
     display: flex;
+    gap: 1.75rem;
     align-items: center;
   }
 
   .wp-nav a {
-    color: #eee;
-    text-decoration: none;
     font-size: 0.875rem;
-    padding: 0.625rem 1.125rem;
-    display: inline-block;
-    transition: background 0.1s;
-  }
-
-  .wp-nav a:hover {
-    background: #444;
-    color: #fff;
-    opacity: 1;
-  }
-
-  .wp-body {
-    background: #fff;
-    min-height: 400px;
-  }
-
-  .wp-body .wp-wrap {
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-  }
-
-  .wp-foot {
-    background: #111;
-    padding: 1.25rem 1.5rem;
-    text-align: center;
-    font-size: 0.8125rem;
-    color: rgba(255, 255, 255, 0.45);
-  }
-
-  .wp-foot a {
-    color: rgba(255, 255, 255, 0.55);
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
     text-decoration: none;
   }
 
-  .wp-foot a:hover {
+  .wp-nav a:hover { color: #0073aa; text-decoration: none; }
+
+  /* WordPress main content */
+  .wp-main {
+    min-height: 400px;
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  /* WordPress footer */
+  .wp-footer {
+    background: #222;
+    padding: 1.5rem 0;
+  }
+
+  .wp-footer p {
+    font-size: 0.8125rem;
+    color: #aaa;
+    text-align: center;
+  }
+
+  .wp-footer a { color: #ccc; }
+  .wp-footer a:hover { color: #fff; text-decoration: underline; }
+
+  /* Cookie bar */
+  .wp-cookie {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f7f7f7;
+    border-top: 1px solid #ddd;
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 0.8125rem;
+    color: #555;
+    z-index: 200;
+  }
+
+  .wp-cookie button {
+    background: #0073aa;
     color: #fff;
-    opacity: 1;
+    border: none;
+    padding: 0.3rem 0.875rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    border-radius: 2px;
+    white-space: nowrap;
   }
 
-  /* Shared post content typography — applied globally so slot content picks it up */
-  :global(.wp-content p) {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #444;
-    margin-bottom: 1.25rem;
-    max-width: 70ch;
+  .wp-cookie button:hover { background: #005580; }
+
+  /* ── Shared post index styles ── */
+  .wp-posts { display: flex; flex-direction: column; }
+
+  .wp-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.75rem;
+    padding: 2rem 0;
   }
 
-  :global(.wp-content h2) {
+  .wp-card-body { flex: 1; }
+
+  .wp-card-date {
+    font-size: 0.8125rem;
+    color: #999;
+    margin-bottom: 0.3rem;
+  }
+
+  .wp-card-title {
     font-family: Georgia, serif;
     font-size: 1.375rem;
     font-weight: bold;
-    color: #222;
-    margin: 2rem 0 0.75rem;
+    line-height: 1.3;
+    margin-bottom: 0.625rem;
   }
 
-  :global(.wp-content h3) {
+  .wp-card-title a { color: #111; text-decoration: none; }
+  .wp-card-title a:hover { color: #0073aa; }
+
+  .wp-card-deck {
+    font-size: 0.9375rem;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+
+  .wp-card-excerpt {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 0.75rem;
+  }
+
+  .wp-card-more {
+    font-size: 0.875rem;
+    color: #0073aa;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .wp-card-more:hover { text-decoration: underline; }
+
+  .wp-card-thumb { flex-shrink: 0; }
+  .wp-card-thumb a { display: block; }
+  .wp-card-thumb a:hover { opacity: 0.85; }
+
+  .wp-card-thumb img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .wp-divider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 0;
+  }
+
+  /* ── Shared single post styles ── */
+  .wp-post { max-width: 680px; }
+
+  .wp-post-meta {
+    font-size: 0.8125rem;
+    color: #999;
+    margin-bottom: 0.375rem;
+  }
+
+  .wp-post-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #111;
+    line-height: 1.25;
+    margin-bottom: 0.375rem;
+  }
+
+  .wp-post-deck {
     font-size: 1.0625rem;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .wp-featured { width: 100%; height: auto; display: block; margin-bottom: 1.75rem; }
+
+  .wp-post-content p {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: #444;
+    margin-bottom: 1.25rem;
+  }
+
+  .wp-post-content h3 {
+    font-family: Georgia, serif;
+    font-size: 1.1875rem;
     font-weight: bold;
     color: #222;
-    margin: 1.75rem 0 0.5rem;
+    margin: 2rem 0 0.625rem;
   }
 
-  :global(.wp-content ul),
-  :global(.wp-content ol) {
+  .wp-post-content ul,
+  .wp-post-content ol {
     font-size: 1rem;
-    line-height: 1.75;
+    line-height: 1.8;
     color: #444;
     padding-left: 1.5rem;
     margin-bottom: 1.25rem;
-    max-width: 65ch;
   }
 
-  :global(.wp-content li) {
-    margin-bottom: 0.25rem;
-  }
+  .wp-post-content li { margin-bottom: 0.25rem; }
 
-  :global(.wp-content blockquote) {
-    border-left: 4px solid #0073aa;
+  .wp-post-content blockquote {
+    border-left: 4px solid #ddd;
     padding: 0.25rem 0 0.25rem 1.25rem;
     margin: 1.5rem 0;
-    color: #555;
+    color: #666;
     font-style: italic;
+  }
+
+  .wp-post-content strong { color: #222; }
+
+  .wp-post-content em { font-style: italic; }
+
+  .wp-post-footer {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #eee;
+    font-size: 0.875rem;
+  }
+
+  .wp-post-footer a { color: #0073aa; }
+  .wp-post-footer a:hover { text-decoration: underline; }
+
+  /* About page */
+  .wp-page-title {
+    font-family: Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .wp-page-content { max-width: 680px; }
+
+  .wp-page-content p {
     font-size: 1rem;
-    line-height: 1.7;
-    max-width: 62ch;
+    line-height: 1.85;
+    color: #444;
+    margin-bottom: 1.25rem;
   }
 
-  :global(.wp-content strong) {
-    color: #222;
-  }
-
-  :global(.wp-content em) {
+  .wp-page-content blockquote {
+    border-left: 4px solid #ddd;
+    padding: 0.25rem 0 0.25rem 1.25rem;
+    margin: 1.5rem 0;
+    color: #666;
     font-style: italic;
   }
 </style>

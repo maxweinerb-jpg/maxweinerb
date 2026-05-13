@@ -1,23 +1,16 @@
 ---
-import ArchiveLayout from '../layouts/ArchiveLayout.astro';
+import ArchiveLayout from '../../layouts/ArchiveLayout.astro';
 ---
 
 <ArchiveLayout title="How To Make The Best, Simple Lasagna — Max on Marketing">
-
   <article class="wp-post">
-    <header class="wp-post-header">
-      <p class="wp-post-date">February 5, 2019</p>
-      <h1 class="wp-post-title">How To Make The Best, Simple Lasagna</h1>
-      <p class="wp-post-deck">A Recipe for Lasagna with 4 Simple Ingredients and 8 Easy Steps</p>
-    </header>
+    <p class="wp-post-meta">Posted on February 5, 2019 by Max Weiner</p>
+    <h1 class="wp-post-title">How To Make The Best, Simple Lasagna</h1>
+    <p class="wp-post-deck">A Recipe for Lasagna with 4 Simple Ingredients and 8 Easy Steps</p>
 
-    <img
-      class="wp-featured-img"
-      src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=860&h=380&fit=crop"
-      alt="Lasagna"
-    />
+    <img class="wp-featured" src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=860&h=360&fit=crop" alt="Lasagna" />
 
-    <div class="wp-content">
+    <div class="wp-post-content">
       <p>When I think of Italian comfort food, I immediately think of lasagna. A staple of Italian cooking and available on just about any restaurant menu that considers itself authentic Italian cuisine, lasagna is basically just layers of pasta covered in cheese and marinara sauce — what could be bad about that? Although lasagna recipes have unlimited variations, it's best to keep it simple. With over 47 million search results when you google "lasagna recipe", there are a lot of overly-complicated and excessively heavy recipes out there. Everyone has their favorite recipe for lasagna and mine originates with my mom.</p>
 
       <h3>What You Don't Know About Lasagna</h3>
@@ -65,57 +58,8 @@ import ArchiveLayout from '../layouts/ArchiveLayout.astro';
       <blockquote>Real G's Move In Silence Like Lasagna — Lil' Wayne</blockquote>
     </div>
 
-    <p class="wp-back"><a href="/archive">← Back to Max on Marketing</a></p>
+    <div class="wp-post-footer">
+      <a href="/archive">← Max on Marketing</a>
+    </div>
   </article>
-
 </ArchiveLayout>
-
-<style>
-  .wp-post { max-width: 720px; }
-
-  .wp-post-date {
-    font-size: 0.8125rem;
-    color: #999;
-    margin-bottom: 0.375rem;
-  }
-
-  .wp-post-title {
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #222;
-    line-height: 1.25;
-    margin-bottom: 0.5rem;
-  }
-
-  .wp-post-deck {
-    font-size: 1rem;
-    color: #666;
-    font-style: italic;
-    margin-bottom: 1.5rem;
-  }
-
-  .wp-featured-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 1.75rem;
-  }
-
-  .wp-back {
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #eee;
-    font-size: 0.875rem;
-  }
-
-  .wp-back a {
-    color: #0073aa;
-    text-decoration: none;
-  }
-
-  .wp-back a:hover {
-    text-decoration: underline;
-    opacity: 1;
-  }
-</style>
