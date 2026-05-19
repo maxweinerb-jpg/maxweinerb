@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Get In Touch" description="Contact Max Weiner — open to new opportunities, collaborations, and conversations about CS and AI.">
+
+  <div class="contact-page">
+    <div class="eyebrow">Get In Touch</div>
+    <h1>Let's talk.</h1>
+
+    <p class="intro">
+      I'm currently open to new opportunities in Customer Success leadership and CS &amp; AI strategy.
+      Whether you want to talk shop, explore working together, or just connect — I'm easy to reach.
+    </p>
+
+    <a href="mailto:maxweinerb@gmail.com" class="email-cta">
+      Send me an email →
+    </a>
+
+    <div class="secondary-links">
+      <a href="https://linkedin.com/in/maxweinerb" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a href="/resume">Resume</a>
+    </div>
+  </div>
+
+</Layout>
+
+<style>
+  .contact-page {
+    padding-top: 4rem;
+    max-width: 520px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-family: var(--font-ubuntu);
+    font-size: 2.75rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: var(--color-text);
+    margin: 0 0 1.75rem;
+  }
+
+  .intro {
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--color-text);
+    margin: 0 0 2.5rem;
+  }
+
+  .email-cta {
+    display: inline-block;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background: var(--color-accent);
+    padding: 0.875rem 1.75rem;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: opacity 0.15s;
+    margin-bottom: 2rem;
+  }
+
+  .email-cta:hover {
+    opacity: 0.85;
+  }
+
+  .secondary-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .secondary-links a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    text-decoration: none;
+    opacity: 0.5;
+    transition: opacity 0.15s;
+  }
+
+  .secondary-links a:hover {
+    opacity: 1;
+    color: var(--color-accent);
+  }
+</style>

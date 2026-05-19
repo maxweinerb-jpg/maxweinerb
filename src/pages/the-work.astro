@@ -2,115 +2,276 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="The Work" description="Selected work by Max Weiner">
-  <section>
-    <h1>The Work</h1>
-    <p class="intro">
-      Placeholder intro — a sentence or two about what this section contains and how to read it.
+<Layout title="The Work" description="About Max Weiner — Customer Success leader, builder, and CS & AI strategist based in Washington, DC.">
+
+  <div class="page-header">
+    <div class="eyebrow">The Work</div>
+    <h1>Ten years of<br><em>making customers stick.</em></h1>
+    <p class="bio">
+      Max Weiner is a Customer Success leader with 10+ years managing enterprise portfolios up to $18M ARR across SaaS and PaaS. He's grown Fortune 10 accounts, reduced churn with prediction models, and built the playbooks and health monitoring programs that help CS teams scale. Based in Washington, DC — currently figuring out what happens when CS meets AI.
     </p>
+  </div>
 
-    <div class="projects">
-      <article class="project">
-        <div class="project-header">
-          <h2>Project One</h2>
-          <span class="meta">Placeholder Category · 2024</span>
-        </div>
-        <p>
-          Placeholder description of the project. What it was, what role you played, and why it
-          matters. Keep it tight.
-        </p>
-      </article>
+  <div class="cards-section">
+    <div class="cards-label">Selected Impact</div>
+    <div class="cards">
 
-      <article class="project">
-        <div class="project-header">
-          <h2>Project Two</h2>
-          <span class="meta">Placeholder Category · 2024</span>
+      <div class="card">
+        <div class="card-image">
+          <span class="image-label">[ image ]</span>
         </div>
-        <p>
-          Placeholder description of the project. What it was, what role you played, and why it
-          matters. Keep it tight.
-        </p>
-      </article>
+        <div class="card-body">
+          <div class="impact-label">Business Impact</div>
+          <div class="impact">$1.6M → $5.5M ARR</div>
+          <div class="card-rule"></div>
+          <div class="field-label">Context</div>
+          <p class="field-text">A stalled Fortune 10 relationship with fragmented stakeholders, unclear value, and no executive alignment across multiple product lines.</p>
+          <div class="field-label">Role</div>
+          <p class="field-text">Led cross-functional alignment and executive engagement strategy over 8 months, reframing the relationship and unlocking $3.9M in expansion ARR.</p>
+        </div>
+      </div>
 
-      <article class="project">
-        <div class="project-header">
-          <h2>Project Three</h2>
-          <span class="meta">Placeholder Category · 2023</span>
+      <div class="card">
+        <div class="card-image">
+          <span class="image-label">[ image ]</span>
         </div>
-        <p>
-          Placeholder description of the project. What it was, what role you played, and why it
-          matters. Keep it tight.
-        </p>
-      </article>
+        <div class="card-body">
+          <div class="impact-label">Business Impact</div>
+          <div class="impact">87% Churn Prediction Accuracy</div>
+          <div class="card-rule"></div>
+          <div class="field-label">Context</div>
+          <p class="field-text">A global customer base of 1,100 accounts with no systematic way to identify at-risk customers before they were already churning.</p>
+          <div class="field-label">Role</div>
+          <p class="field-text">Managed a 3-person team to build 9 health monitoring tools, including a prediction model that retained $15M+ ARR through early intervention.</p>
+        </div>
+      </div>
 
-      <article class="project">
-        <div class="project-header">
-          <h2>Project Four</h2>
-          <span class="meta">Placeholder Category · 2023</span>
+      <div class="card">
+        <div class="card-image">
+          <span class="image-label">[ image ]</span>
         </div>
-        <p>
-          Placeholder description of the project. What it was, what role you played, and why it
-          matters. Keep it tight.
-        </p>
-      </article>
+        <div class="card-body">
+          <div class="impact-label">Business Impact</div>
+          <div class="impact">120%+ NRR</div>
+          <div class="card-rule"></div>
+          <div class="field-label">Context</div>
+          <p class="field-text">Six strategic enterprise accounts across Financial Services, Life Sciences, and Supply Chain — each requiring a distinct engagement model.</p>
+          <div class="field-label">Role</div>
+          <p class="field-text">Built a high-touch success model driving EBRs, platform adoption, and success planning that expanded usage by 2,000+ users and $1M+ in services.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <span class="image-label">[ image ]</span>
+        </div>
+        <div class="card-body">
+          <div class="impact-label">Business Impact</div>
+          <div class="impact">~$180K Annual Spend Eliminated</div>
+          <div class="card-rule"></div>
+          <div class="field-label">Context</div>
+          <p class="field-text">The CS team depended on a third-party project management tool used by 1,000+ internal users with no internal alternative in place.</p>
+          <div class="field-label">Role</div>
+          <p class="field-text">Spearheaded an AI-assisted initiative to build and deploy an internal replacement, eliminating the recurring software cost entirely.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image">
+          <span class="image-label">[ image ]</span>
+        </div>
+        <div class="card-body">
+          <div class="impact-label">Business Impact</div>
+          <div class="impact">25% Faster Implementations</div>
+          <div class="card-rule"></div>
+          <div class="field-label">Context</div>
+          <p class="field-text">70+ enterprise hospital implementations with no standardized training program — onboarding time was inconsistent and bottlenecked on the CS team.</p>
+          <div class="field-label">Role</div>
+          <p class="field-text">Built a scalable certification program using Articulate that trained and certified 5,000+ system users, cutting implementation time by a quarter.</p>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+
 </Layout>
 
 <style>
-  h1 {
-    font-family: var(--font-ubuntu);
-    font-size: 2rem;
-    font-weight: 700;
+  :global(main) {
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .page-header {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
     margin-bottom: 1.25rem;
   }
 
-  .intro {
-    font-size: 1.0625rem;
-    max-width: 55ch;
-    opacity: 0.8;
-    margin-bottom: 3rem;
+  h1 {
+    font-family: var(--font-ubuntu);
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--color-text);
+    margin: 0 0 1.75rem;
   }
 
-  .projects {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .project {
-    padding: 2rem 0;
-    border-top: 1px solid rgba(28, 28, 26, 0.1);
-  }
-
-  .project:last-child {
-    border-bottom: 1px solid rgba(28, 28, 26, 0.1);
-  }
-
-  .project-header {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-    margin-bottom: 0.625rem;
-    flex-wrap: wrap;
-  }
-
-  h2 {
-    font-family: var(--font-sans);
-    font-size: 1.25rem;
-    font-weight: 600;
+  h1 em {
+    font-style: italic;
+    font-weight: 400;
     color: var(--color-accent);
   }
 
-  .meta {
+  .bio {
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: var(--color-text);
+    max-width: 58ch;
+    margin: 0;
+  }
+
+  .cards-section {
+    padding: 3rem 1.5rem 5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(28, 28, 26, 0.1);
+  }
+
+  .cards-label {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 0.75rem);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .card {
+    background: #fff;
+    border-top: 3px solid var(--color-accent);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05), 0 0 0 1px rgba(26,58,107,0.06);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, rgba(26,58,107,0.06) 0%, rgba(26,58,107,0.14) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .image-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
     opacity: 0.45;
   }
 
-  .project p {
-    font-size: 0.9375rem;
-    max-width: 60ch;
-    opacity: 0.75;
-    line-height: 1.65;
+  .card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    flex: 1;
+  }
+
+  .impact-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    opacity: 0.5;
+    margin-bottom: 0.375rem;
+  }
+
+  .impact {
+    font-family: var(--font-ubuntu);
+    font-size: 1.4375rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--color-text);
+    letter-spacing: -0.015em;
+    margin-bottom: 1rem;
+  }
+
+  .card-rule {
+    width: 32px;
+    height: 2px;
+    background: var(--color-accent);
+    opacity: 0.3;
+    margin-bottom: 1rem;
+  }
+
+  .field-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text);
+    opacity: 0.4;
+    margin-bottom: 0.25rem;
+    margin-top: 0.875rem;
+  }
+
+  .field-label:first-of-type {
+    margin-top: 0;
+  }
+
+  .field-text {
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    .cards {
+      grid-template-columns: 1fr;
+    }
+
+    .card:last-child:nth-child(odd) {
+      grid-column: auto;
+      max-width: 100%;
+    }
   }
 </style>
