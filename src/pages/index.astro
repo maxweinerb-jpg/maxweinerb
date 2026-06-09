@@ -8,10 +8,11 @@ import Layout from '../layouts/Layout.astro';
     <h1 class="mw-hero-headline">Max Weiner<em>Customer Success Leader <span class="mw-sep">·</span> CS &amp; AI Strategist <span class="mw-sep">·</span> Coach</em></h1>
   </div>
 
-  <div class="mw-banner">
-    <div class="mw-banner-rule"></div>
-    <div class="mw-banner-eyebrow">Status</div>
-    <p class="mw-banner-line">This page is under construction — <em>check back soon.</em></p>
+  <div class="mw-intro">
+    <p>I, along with 1,100 of my closest friends, was part of a "reduction in force" in May. While never a fun experience, this wasn't my first rodeo, and severance bought me a few months and no meetings, so I'm rebuilding this site.</p>
+    <p>While I don't intend to become a LinkedIn influencer, it was time to rebrand this website from a grad school project into something more using AI. I consider myself a builder - whether customer success playbooks, value for customers, or something more impactful - I like sweating the details, digging into the data, and working with people to make something better.</p>
+    <p>When I coach job seekers, I often remind them of the powerful phrase "for now."</p>
+    <p><em>For now</em>, I plan to use this site as a creative outlet - to experiment with AI, website development, and generally see where the road takes me. You can expect to find projects in various states of done, musings about Customer Success and/or AI, more information about my background, and an archived version of a 2019 site I built for a grad school marketing class that includes my mom's lasagna recipe (that last one is worth a click).</p>
   </div>
 
 </Layout>
@@ -27,6 +28,8 @@ import Layout from '../layouts/Layout.astro';
   .mw-hero {
     padding: 5.5rem 3rem 3rem;
     max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
   }
 
 .mw-hero-headline {
@@ -56,43 +59,26 @@ import Layout from '../layouts/Layout.astro';
     opacity: 0.4;
   }
 
-  .mw-banner {
-    max-width: 720px;
+  .mw-intro {
+    max-width: 680px;
     margin: 0 auto;
-    padding: 4rem 3rem 6rem;
-    text-align: center;
+    padding: 1rem 3rem 6rem;
   }
 
-  .mw-banner-rule {
-    width: 48px;
-    height: 2px;
-    background: var(--color-accent);
-    border-radius: 1px;
-    margin: 0 auto 1.5rem;
-  }
-
-  .mw-banner-eyebrow {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    margin-bottom: 1.5rem;
-  }
-
-  .mw-banner-line {
-    font-family: var(--font-ubuntu);
-    font-size: 1.75rem;
-    font-weight: 500;
-    line-height: 1.35;
-    letter-spacing: -0.015em;
+  .mw-intro p {
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    line-height: 1.7;
     color: var(--color-text);
-    margin: 0;
+    margin: 0 0 1.5rem;
   }
 
-  .mw-banner-line em {
+  .mw-intro p:last-child {
+    margin-bottom: 0;
+  }
+
+  .mw-intro em {
     font-style: italic;
-    font-weight: 400;
     color: var(--color-accent);
   }
 
