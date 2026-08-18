@@ -8,12 +8,9 @@ import Layout from '../layouts/Layout.astro';
     <h1 class="mw-hero-headline">Max Weiner<em>Customer Success Leader <span class="mw-sep">·</span> CS &amp; AI Strategist <span class="mw-sep">·</span> Coach</em></h1>
   </div>
 
-
   <div class="work-section">
-    <div class="eyebrow">The Work</div>
-    <h2 class="work-headline">Ten years of<br><em>making customers stick.</em></h2>
     <p class="work-bio">
-      10+ years managing enterprise portfolios up to $18M ARR across SaaS and PaaS - growing Fortune 10 accounts, cutting churn with prediction models, and building the playbooks and health programs that help CS teams scale.
+      I've spent about 12 years in Customer Success, and my career splits neatly into two halves: building from scratch in startups, then bringing that same builder instinct to enterprise accounts at public companies like Appian and Cloudflare, where I've sustained 120%+ net revenue retention across strategic books. I'm proactive with data, quick to become a trusted advisor, and increasingly putting AI to work. Simply put, I get stuff done.
     </p>
 
     <div class="cards-label">Career Highlights</div>
@@ -73,24 +70,24 @@ import Layout from '../layouts/Layout.astro';
       <div class="card">
         <div class="card-image">
           <svg class="motif" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="200" cy="110" r="20" fill="none" stroke="#1A3A6B" stroke-width="2.5" opacity="0.55"/>
-            <circle cx="200" cy="110" r="46" fill="none" stroke="#1A3A6B" stroke-width="2" opacity="0.32"/>
-            <circle cx="200" cy="110" r="74" fill="none" stroke="#1A3A6B" stroke-width="1.75" opacity="0.20"/>
-            <circle cx="200" cy="110" r="102" fill="none" stroke="#1A3A6B" stroke-width="1.5" opacity="0.12"/>
-            <circle cx="200" cy="110" r="6" fill="#1A3A6B" opacity="0.6"/>
-            <circle cx="246" cy="110" r="4" fill="#1A3A6B" opacity="0.45"/>
-            <circle cx="272" cy="72"  r="4" fill="#1A3A6B" opacity="0.35"/>
-            <circle cx="153" cy="139" r="4" fill="#1A3A6B" opacity="0.35"/>
+            <path d="M183 132 L173 192 L200 176 L227 192 L217 132 Z" fill="#1A3A6B" opacity="0.16"/>
+            <circle cx="200" cy="94" r="50" fill="#1A3A6B" opacity="0.06"/>
+            <circle cx="200" cy="94" r="50" fill="none" stroke="#1A3A6B" stroke-width="2.5" opacity="0.5"/>
+            <rect x="169" y="85" width="7" height="18" rx="3.5" fill="#1A3A6B" opacity="0.5"/>
+            <rect x="183" y="76" width="7" height="36" rx="3.5" fill="#1A3A6B" opacity="0.6"/>
+            <rect x="197" y="68" width="7" height="52" rx="3.5" fill="#1A3A6B" opacity="0.75"/>
+            <rect x="211" y="76" width="7" height="36" rx="3.5" fill="#1A3A6B" opacity="0.6"/>
+            <rect x="225" y="85" width="7" height="18" rx="3.5" fill="#1A3A6B" opacity="0.5"/>
           </svg>
         </div>
         <div class="card-body">
           <div class="impact-label">Business Impact</div>
-          <div class="impact">120%+ NRR</div>
+          <div class="impact">Amazon Alexa Innovation Award</div>
           <div class="card-rule"></div>
           <div class="field-label">Context</div>
-          <p class="field-text">Six strategic enterprise accounts across Financial Services, Life Sciences, and Supply Chain, each needing a distinct engagement model.</p>
+          <p class="field-text">A Westwood One voice experience for NCAA March Madness on Amazon Alexa - a high-visibility launch Amazon was pushing to get live fast.</p>
           <div class="field-label">Role</div>
-          <p class="field-text">Built a high-touch success model driving EBRs, adoption, and success planning that expanded usage by 2,000+ users and $1M+ in services.</p>
+          <p class="field-text">Led product design and the Amazon partnership as product owner, de-risking the build directly with Amazon and delivering an award-winning skill that reached 1M+ listeners.</p>
         </div>
       </div>
 
@@ -186,69 +183,20 @@ import Layout from '../layouts/Layout.astro';
     opacity: 0.4;
   }
 
-  .mw-intro {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 1rem 3rem 4rem;
-  }
-
-  .mw-intro p {
-    font-family: var(--font-sans);
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: var(--color-text);
-    margin: 0 0 1.5rem;
-  }
-
-  .mw-intro p:last-child {
-    margin-bottom: 0;
-  }
-
-  .mw-intro em {
-    font-style: italic;
-    color: var(--color-accent);
-  }
-
-  /* The Work */
   .work-section {
     max-width: 800px;
     margin: 0 auto;
-    padding: 3rem 1.5rem 5rem;
-    border-top: 1px solid rgba(28, 28, 26, 0.1);
-  }
-
-  .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    margin-bottom: 1.25rem;
-  }
-
-  .work-headline {
-    font-family: var(--font-ubuntu);
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.025em;
-    color: var(--color-text);
-    margin: 0 0 1.5rem;
-  }
-
-  .work-headline em {
-    font-style: italic;
-    font-weight: 400;
-    color: var(--color-accent);
+    padding: 2rem 1.5rem 5rem;
   }
 
   .work-bio {
     font-family: var(--font-sans);
-    font-size: 1.0625rem;
-    line-height: 1.75;
+    font-size: 1.15rem;
+    line-height: 1.7;
     color: var(--color-text);
-    max-width: 60ch;
-    margin: 0 0 2.75rem;
+    max-width: 62ch;
+    margin: 0 auto 3rem;
+    text-align: center;
   }
 
   .cards-label {
@@ -259,6 +207,7 @@ import Layout from '../layouts/Layout.astro';
     text-transform: uppercase;
     color: var(--color-accent);
     margin-bottom: 1.5rem;
+    text-align: center;
   }
 
   .cards {
@@ -277,7 +226,6 @@ import Layout from '../layouts/Layout.astro';
     overflow: hidden;
   }
 
-  /* Featured card: image left, body right */
   .card-featured {
     display: grid;
     grid-template-columns: 42% 1fr;
@@ -371,8 +319,7 @@ import Layout from '../layouts/Layout.astro';
   @media (max-width: 640px) {
     .mw-hero { padding: 4rem 1.5rem 2rem; }
     .mw-hero-headline { font-size: 2rem; }
-    .mw-intro { padding: 1rem 1.5rem 3rem; }
-    .work-headline { font-size: 2rem; }
+    .work-bio { font-size: 1.05rem; text-align: left; }
     .cards { grid-template-columns: 1fr; }
     .card-featured { grid-template-columns: 1fr; }
     .card-featured .card-image { aspect-ratio: 16 / 9; min-height: 0; }
